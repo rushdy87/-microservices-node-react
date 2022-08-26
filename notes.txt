@@ -1,0 +1,39 @@
+What is a monolith server?
+  - A monolith server is a server that utilizes a monolithic architecture, as a monolithic server 
+    is self-contained and does not require any dependence on any other servers.
+What are microservices?
+  - s an architectural method that relies on a series of independently deployable services. These 
+    services have their own business logic and database with a specific goal. Updating, testing, 
+    deployment, and scaling occur within each service.
+  - Each service gets its own database (if it needs one).
+  - Services will never, ever reach into another services database.
+_____________________________________________________________________________________________________
+Database per service:
+  - every service has it's own database.
+_____________________________________________________________________________________________________
+Quize:
+Question 1:
+Creating one database per service seems like a waste!  Why do we create one database per service?
+1- WE want every service to be able to act independently without depending on any other service.
+2- If each service has its own database, we can optimize what type of database we pick for a service.
+3- a single database shared between many services would be a single point of failure, which would limted 
+  the reliablty of our app.
+4- All of the above.
+Question 2:
+Imagine you are developing a service called ProductsService. Your service's goal is to manage all aspects 
+of products sold on your platform.
+Another engineer who is responsible for a different service comes to you and asks for documentation on how 
+to connect to your services database. 
+How would you respond?
+1- I would show them how to connect directly to my database from there service.
+2- I would asked them to find another way to get information out of may service's database.
+Question 3:
+What is the #1 challenge in microservices?
+1- Manging data between different services.
+2- implementing monntering and logging for services writen in different languages.
+3- Deploy two services in the same time.
+_____________________________________________________________________________________________________
+Communication Strategies Between Services:
+  - Sync: Services communicate with each other using direct requests.
+  - Async: Services communicate with each other using events.
+_____________________________________________________________________________________________________
