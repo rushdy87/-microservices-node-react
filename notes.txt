@@ -37,3 +37,5 @@ Communication Strategies Between Services:
   - Sync: Services communicate with each other using direct requests.
   - Async: Services communicate with each other using events.
 _____________________________________________________________________________________________________
+
+_____________________________________________________________________________________________________
