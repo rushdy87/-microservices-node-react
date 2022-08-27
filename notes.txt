@@ -37,5 +37,10 @@ Communication Strategies Between Services:
   - Sync: Services communicate with each other using direct requests.
   - Async: Services communicate with each other using events.
 _____________________________________________________________________________________________________
-
+CORS:
+Cross-Origin Resource Sharing (CORS) is a mechanism or a protocol that allows devices on one domain to 
+access resources residing on other domains.
+Generally, for security reasons, browsers forbid requests that come in from cross-domain sources. However, 
+there could be cases where you want to overcome this and access cross-domain resources, and CORS makes this 
+possible.
 _____________________________________________________________________________________________________
