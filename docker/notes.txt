@@ -1,0 +1,74 @@
+Docker:
+  Docker is a set of platforms as a service (PaaS) products that use the Operating system level visualization 
+to deliver software in packages called containers.
+  Containers are isolated from one another and bundle their own software, libraries, and configuration files; 
+they can communicate with each other through well-defined channels.
+  All containers are run by a single operating system kernel and therefore use fewer resources than a virtual 
+machine.
+Important Terminologies in Docker:
+  - Docker Image
+    * It is a file, comprised of multiple layers, used to execute code in a Docker container.
+    * They are a set of instructions used to create docker containers.
+  - Docker Container
+    * It is a runtime instance of an image.
+    * Allows developers to package applications with all parts needed such as libraries and other dependencies.
+  - Docker file
+    * It is a text document that contains necessary commands which on execution helps assemble a Docker Image.
+    * Docker image is created using a Docker file.
+  - Docker Engine
+    * The software that hosts the containers is named Docker Engine.
+    * Docker Engine is a client-server based application
+    * The docker engine has 3 main components:
+      1- Server: It is responsible for creating and managing Docker images, containers, networks, and volumes 
+      on the Docker. It is referred to as a daemon process.
+      2- REST API: It specifies how the applications can interact with the Server and instructs it what to do.
+      3- Client: The Client is a docker command-line interface (CLI), that allows us to interact with Docker 
+      using the docker commands.
+  - Docker Hub
+    * Docker Hub is the official online repository where you can find other Docker Images that are available for 
+    use.
+    * It makes it easy to find, manage, and share container images with others.
+__________________________________________________________________________________________________________________
+Namespacing: Isolating resources per process (or group of processes).
+Control Group (cgroups): Limit amount of resources used per process.
+A container is a process or set of processes that have grouping of resources specifically assigned to it.
+__________________________________________________________________________________________________________________
+When you istall docker, you install linux virtual machine. inside this virtual machine is where all containers
+are going to be created.
+__________________________________________________________________________________________________________________
+commands in termenal:
+docker run <image name>:
+  creating and running a container from an image.
+
+docker run <image name> <command>:
+  - the <command> is override the default command
+
+docker ps:
+  list all running containers.
+__________________________________________________________________________________________________________________
+container lifecycle:
+docker run = docker create + docker start
+__________________________________________________________________________________________________________________
+docker system prune:
+  - delete all containers
+__________________________________________________________________________________________________________________
+docker logs <container id>
+__________________________________________________________________________________________________________________
+docker stop <container id>
+or
+docker kill <container id>
+  to stop a container which running.
+__________________________________________________________________________________________________________________
+execute an additional command in a container:
+  docker exec -it <container id> <command>
+__________________________________________________________________________________________________________________
+creating docker image:
+1- creat a Dockerfile*.
+2- pass it to Docker client.
+3- Docker client provied the file to Docker Server.
+4- Docker Server build a usable Image
+
+*creating a Dockerfile:
+- specify a base image.
+- rus some commands to install dditional programs.
+- specify a commend to run on container stratup.
