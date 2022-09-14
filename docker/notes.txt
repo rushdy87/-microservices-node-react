@@ -72,3 +72,11 @@ creating docker image:
 - specify a base image.
 - rus some commands to install dditional programs.
 - specify a commend to run on container stratup.
+
+example (in ./Dockerfile)
+instruction telling Docker server what to do                argumet to the instruction
+    FROM        =========================================>      apline
+    run         =========================================>      apk add --update redis
+    CMD         =========================================>      [redis-server]
+__________________________________________________________________________________________________________________
+Rebuilds with Cache
